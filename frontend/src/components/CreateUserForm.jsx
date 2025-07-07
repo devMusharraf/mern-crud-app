@@ -32,11 +32,11 @@ const CreateUserForm = ({ editingUser, setEditingUser }) => {
         try {
             if (editingUser) {
 
-                await axios.put(`http://localhost:5000/api/users/${editingUser._id}`, formData);
+                await axios.put(`https://mern-crud-app-f2z4.onrender.com/api/users/${editingUser._id}`, formData);
                 alert('User updated successfully!')
             }
             else {
-                await axios.post('http://localhost:5000/api/users', formData);
+                await axios.post('https://mern-crud-app-f2z4.onrender.com/api/users', formData);
                 alert('User created succesfully!')
             }
             setFormData({ name: "", age: '', email: "" });

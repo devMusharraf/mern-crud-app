@@ -8,7 +8,7 @@ const UserList = ({ setEditingUser }) => {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/users');
+            const response = await axios.get('https://mern-crud-app-f2z4.onrender.com/api/users');
 
             if (Array.isArray(response.data)) {
                 setUsers(response.data);
@@ -31,7 +31,7 @@ const UserList = ({ setEditingUser }) => {
         if (!confirm) return;
 
         try {
-            await axios.delete(`http://localhost:5000/api/users/${id}`);
+            await axios.delete(`https://mern-crud-app-f2z4.onrender.com/api/users/${id}`);
             alert('USer deleted successfully!')
             fetchUsers();
         } catch (error) {
